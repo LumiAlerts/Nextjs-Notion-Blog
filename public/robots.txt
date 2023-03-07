@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nobsadvice.dev
+
+# Sitemaps
+Sitemap: https://nobsadvice.dev/sitemap.xml

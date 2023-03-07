@@ -1,0 +1,48 @@
+.linkContainer {
+	display: flex !important;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-around;
+	gap: 75px;
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+.heroImage {
+	width: 100%;
+	object-fit: cover;
+}
+
+.headerContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	overflow: hidden;
+	transition: 0.3s;
+}
+
+.loadingSkeleton {
+	width: 100% !important;
+}
+
+.title {
+	width: fit-content;
+	margin-bottom: 30px;
+	@media screen and (max-width: 743px) {
+		margin-bottom: 0;
+	}
+}
+
+.subtitle {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 100;
+	@media screen and (max-width: 743px) {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+}

@@ -1,0 +1,141 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 320px;
+	height: fit-content;
+	margin-top: 5px;
+	transition: 0.3s;
+	@media screen and (max-width: 400px) {
+		width: 99%;
+		justify-content: center;
+	}
+
+	&:hover {
+		transform: scale(1.02);
+	}
+}
+
+.loadingCaption {
+	width: 100%;
+}
+
+.loadingImage {
+	transition: 0.3s;
+	cursor: pointer;
+	width: 300px;
+
+	@media screen and (max-width: 400px) {
+		width: 99%;
+		height: 200px;
+	}
+}
+
+.image {
+	border-radius: 4px;
+	transition: 0.3s;
+	cursor: pointer;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	max-width: 315px;
+	object-fit: cover;
+
+	@media screen and (max-width: 400px) {
+		width: 99%;
+		height: 200px;
+	}
+}
+
+.title {
+	display: inline-block;
+	position: relative;
+	color: black;
+	text-decoration: none;
+	width: fit-content;
+	// padding-left: 12px;
+	// padding-right: 12px;
+}
+
+.title::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.title:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+	text-decoration: underline;
+	color: black;
+}
+
+.date {
+	padding-top: 4px;
+	padding-bottom: 0;
+	color: gray;
+}
+
+.memo {
+	padding-bottom: 12px;
+	padding-top: 2px;
+	width: 100%;
+	font-weight: 300;
+}
+
+.loadingMemo {
+	padding-bottom: 12px;
+	padding-top: 2px;
+	width: 90%;
+}
+
+.tagContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	margin-right: 8px;
+}
+
+.tag {
+	width: fit-content;
+	padding: 2px;
+	padding-left: 6px;
+	padding-right: 6px;
+	border-radius: 4px;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+	font-size: 14px;
+}
+
+.loadingTag {
+	width: fit-content;
+	padding: 2px;
+	padding-left: 6px;
+	padding-right: 6px;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.readMore {
+	padding-top: 4px;
+	padding-bottom: 0;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.3s;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.readMoreType {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	font-weight: 600 !important;
+	font-size: 16px !important;
+}

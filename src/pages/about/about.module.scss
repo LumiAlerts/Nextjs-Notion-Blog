@@ -1,0 +1,10 @@
+.paragraphContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.image {
+	width: 100%;
+	object-fit: cover;
+}

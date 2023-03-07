@@ -1,0 +1,48 @@
+.followContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+	max-width: 600px;
+}
+
+.header {
+	font-weight: 300;
+	margin-bottom: 20px;
+	text-align: center;
+	transition: 0.3s;
+	@media screen and (max-width: 538px) {
+		font-size: 32px;
+	}
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	margin-bottom: 12px;
+	width: 75%;
+	transition: 0.3s;
+	@media screen and (max-width: 538px) {
+		width: 100%;
+	}
+}
+
+.textInput {
+	width: 100%;
+}
+
+.dividerContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 120px;
+}
+
+.divider {
+	width: 70%;
+	margin-top: 30px;
+}
