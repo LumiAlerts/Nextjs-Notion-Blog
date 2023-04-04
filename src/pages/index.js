@@ -16,7 +16,8 @@ export default function Home() {
 	const { posts: recentPost, loading: recentLoading } = usePosts("recent");
 	const onlyWidth = useWindowWidth();
 
-	const loadingSkeleton = Array.from(Array(3).keys());
+	const loadingSkeleton = Array.from(Array(4).keys());
+
 	return (
 		<>
 			<SEO
@@ -62,17 +63,18 @@ export default function Home() {
 							<div className={styles.grid}>
 								{loading ? (
 									<>
-										{loadingSkeleton.length > 0 &&
-											posts
-												.slice(
-													1,
-													onlyWidth < 1080
-														? onlyWidth < 745
-															? posts.length
-															: 3
-														: posts.length
-												)
-												.map((post, index) => <LoadingBlogTile key={index} />)}
+										{loadingSkeleton
+											.slice(
+												1,
+												onlyWidth < 1080
+													? onlyWidth < 745
+														? loadingSkeleton.length
+														: 3
+													: loadingSkeleton.length
+											)
+											.map((number, index) => (
+												<LoadingBlogTile key={index} />
+											))}
 									</>
 								) : (
 									<>
