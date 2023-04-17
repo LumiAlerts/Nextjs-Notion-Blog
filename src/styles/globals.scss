@@ -131,6 +131,9 @@ a {
 
 	a {
 		color: rgb(0, 55, 132) !important;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	pre {
@@ -257,5 +260,8 @@ a {
 			width: 90%;
 			display: inline-flex;
 		}
+	}
+	.rnr-inline-code {
+		color: #358ccb;
 	}
 }
