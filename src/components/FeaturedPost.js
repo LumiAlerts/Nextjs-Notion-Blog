@@ -61,7 +61,7 @@ const FeaturedPost = ({ post, loading, label }) => {
 								<Skeleton variant="text" width={300} />
 							) : (
 								<Link
-									href={`/post/${post?.id}`}
+									href={`/post?postID=${post?.id}`}
 									className={cx(styles.title, "link")}
 								>
 									{post?.title ?? ""}
