@@ -14,10 +14,10 @@ const Footer = () => {
 			>
 				<div>
 					<Typography variant="h3" sx={{ fontWeight: 200 }}>
-						No BS Advice
+						{process.env.NEXT_PUBLIC_SITE_NAME}
 					</Typography>
 					<Typography variant="h6" sx={{ fontWeight: 200 }}>
-						Life advice where it counts. No bullshit.
+						{process.env.NEXT_PUBLIC_SITE_MOTTO_FOOTER}
 					</Typography>
 				</div>
 				<div className={styles.buttonContainer}>

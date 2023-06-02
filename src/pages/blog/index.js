@@ -41,7 +41,10 @@ const Blog = () => {
 		"https://images.unsplash.com/photo-1619252584172-a83a949b6efd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80";
 	return (
 		<>
-			<SEO title="No BS Advice | Blog" image={image} />
+			<SEO
+				title={`${process.env.NEXT_PUBLIC_SITE_NAME} | Blog`}
+				image={image}
+			/>
 			<NavBar heroPhoto={image} />
 			<Container maxWidth="md">
 				<Typography

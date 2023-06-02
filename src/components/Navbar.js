@@ -20,10 +20,10 @@ const NavBar = ({ heroPhoto, loading }) => {
 				sx={{ display: "flex", marginBottom: 2 }}
 			>
 				<Typography variant="h2">
-					<Link href="/">No BS Advice</Link>
+					<Link href="/">{process.env.NEXT_PUBLIC_SITE_NAME}</Link>
 				</Typography>
 				<Typography variant="body2" className={styles.subtitle}>
-					Honesty, transparency, and no bullshit.
+					{process.env.NEXT_PUBLIC_SITE_MOTTO_NAV}
 				</Typography>
 			</Container>
 			{loading && (

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const usePost = (postID) => {
-	const [post, setPost] = useState({});
+	const [post, setPost] = useState({ blocks: [] });
 	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {

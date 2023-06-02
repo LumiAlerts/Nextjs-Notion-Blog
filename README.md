@@ -1,4 +1,4 @@
-# No BS Advice Blog
+# Notion CMS Blog
 
 A Next.js + Notion Blog that can be easily deployed, built and developed on top of.
 
@@ -10,6 +10,9 @@ NOTION_KEY=...
 NOTION_DATABASE_ID=...
 NOTION_QUESTION_DATABASE_ID=...
 NOTION_NEWS_LETTER_DATABASE_ID=...
+NEXT_PUBLIC_SITE_NAME="Notion CMS Blog"
+NEXT_PUBLIC_SITE_MOTTO_FOOTER="A simple blog built with on Next.js and Notion"
+NEXT_PUBLIC_SITE_MOTTO_NAV="A simple blog built with on Next.js and Notion"
 ```
 
 ```

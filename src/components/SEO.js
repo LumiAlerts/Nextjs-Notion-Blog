@@ -2,8 +2,8 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const SEO = ({
-	title = "No BS Advice",
-	description = "Blog for unbias no BS advice",
+	title = process.env.NEXT_PUBLIC_SITE_NAME,
+	description = process.env.NEXT_PUBLIC_SITE_MOTTO_NAV,
 	type = "blog",
 	timeStamp,
 	image,
@@ -29,7 +29,10 @@ const SEO = ({
 				<meta property="og:title" content={title} />
 				<meta property="og:description" content={description} />
 				<meta property="og:type" content={type} />
-				<meta property="og:site_name" content="No BS Advice" />
+				<meta
+					property="og:site_name"
+					content={process.env.NEXT_PUBLIC_SITE_MOTTO_NAV}
+				/>
 				<meta name="theme-color" content="#ffffff" />
 				<meta name="twitter:site" content="summary_large_image" />
 				<meta name="twitter:card" content="summary" />

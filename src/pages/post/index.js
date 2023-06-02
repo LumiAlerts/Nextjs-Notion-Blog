@@ -7,16 +7,15 @@ import {
 	Typography,
 } from "@mui/material";
 import { useRouter } from "next/router";
-import { Render } from "@9gustin/react-notion-render";
 import NavBar from "@/components/Navbar";
-import prism from "../../assets/prism";
-import { useEffect } from "react";
 import styles from "./index.module.scss";
 import SEO from "@/components/SEO";
 import AskAQuestion from "@/components/AskAQuestion";
 import dayjs from "dayjs";
 import useTimeRead from "@/hooks/useTimeRead";
 import { ChevronLeft } from "@mui/icons-material";
+import { NotionBlocks } from "notion-blocks";
+import 'notion-blocks/dist/styles/katex.css'
 
 const Post = () => {
 	const router = useRouter();
@@ -24,12 +23,6 @@ const Post = () => {
 	const { post, loading } = usePost(postID);
 	const { timeFormatted } = useTimeRead(loading || post);
 	const { blocks, cover, response } = post;
-
-	useEffect(() => {
-		if (!loading) {
-			prism.highlightAll();
-		}
-	}, [loading]);
 
 	const skeletonMap = Array.from(Array(20).keys());
 
@@ -62,8 +55,7 @@ const Post = () => {
 						)}{" "}
 						| {timeFormatted}
 					</Typography>
-
-					<Render blocks={blocks} useStyles simpleTitles emptyBlocks />
+					<NotionBlocks blocks={blocks} />
 				</Container>
 			)}
 			<AskAQuestion />

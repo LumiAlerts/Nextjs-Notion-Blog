@@ -21,7 +21,7 @@ export default function Home() {
 	return (
 		<>
 			<SEO
-				title="No BS Advice | Home"
+				title={`${process.env.NEXT_PUBLIC_SITE_NAME} | Home`}
 				image="https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
 			/>
 			<Container maxWidth="lg">

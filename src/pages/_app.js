@@ -5,7 +5,6 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "../assets/prism.css";
-import "@9gustin/react-notion-render/dist/index.css";
 import "react-toastify/dist/ReactToastify.css";
 
 import { Analytics } from "@vercel/analytics/react";
